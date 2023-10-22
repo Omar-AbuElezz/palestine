@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+ 
+    perspective: 3000px;
+}
+header{
+width: 90%;         height: 70px;
+margin: auto;
+margin-top: 60px;
+}
+header img{
+    height: 100%;   width: 160px;   
+    display: inline;
+}
+nav{    
+    display: inline;
+}
+nav a{   
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+}
+.nav-parent{
+    width: 80%; 
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr  1fr  1fr  1fr  1fr;
+}
+.nav-div{
+    width: 140px;    height: 40px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+}
+.nav-div::after,.nav-div::before{
+    content:"";
+    position: absolute;
+    border-style: solid; 
+    left: 0;
+    top:0; 
+    transition: 1s;
+}
+.nav-div::after{
+    border-width: 2px 0;
+    height: 91%; 
+    width: 98%;
+    transform: scale3d(0,1,1);
+}
+.nav-div:hover::after{
+    transform: scale3d(1,1,1);
+}
+.nav-div::before{
+    border-width: 0 2px;
+    height: 100%; 
+    width: 95%;
+    transform: scale3d(1,0,1);
+}
+.nav-div:hover::before{
+    transform: scale3d(1,1,1);
+}
+.hidden-div{
+    position: absolute;
+    width: 500px;            height: 200px;
+    margin-left: 500px;
+    margin-top: 5px;
+    border: 3px solid black;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: 1s;
+    background-color: white;
+}
+.hidden-div ul{
+    display: inline-block;
+    margin-left: 70px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.hidden-div ul li:first-child{
+    border-bottom: 1px dotted black;
+}
+nav:hover .hidden-div{
+    visibility: visible;
+    transform: scale(1);
+    opacity: 1;
+}
+.header-icons{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 1150px;   
+    line-height: 40px;
+}
+.icon{
+    font-size: 35px;
+    transition: 1s;
+    cursor: pointer;
+    margin-right: 39px;
+}
+.icon:hover{
+    transform: scale(1.2);
+    opacity: .4;
+}
+main{
+    width: 85%;            height: 80vh;
+    margin: auto;
+    margin-top: 100px;
+    background-image: url(../img2/palestine\ bombed.jpg);
+    background-size: cover;
+}
+.main-overlay{
+    width: 100%;        height: 100%;
+    background-color: rgba(68, 68, 68, 0.479);
+}
+.main-content{
+    padding: 40px;
+    color:white;
+    font-size: 38px;   
+}
+.hed2{
+    font-size: 40px;
+    text-align: center;
+}
+.line-container{
+    width: 100%;     height: 25px;
+    margin-top: 50px;
+    position: relative;
+}
+.line{
+    width: 100px;   height: 4px;
+    background-color: black;
+    margin: auto;
+    margin-top: 5px;
+    transition: 1s;
+}
+.line-container:hover .line{
+    width: 200px;  height: 3px;
+}
+.section1{
+    width: 80%;         height: 60vh;
+    margin: auto;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-gap: 8px;
+}
+.live1{
+    background-image: url(../img2/pales.jpg);
+    background-size: cover;
+}
+.live2{
+    background-image: url(../img2/baghdad.jpg);
+    background-size: cover;
+}
+.live3{
+    background-image: url(../img2/pales.jpg);
+    background-size: cover;
+}
+.live4{
+    background-image: url(../img2/cairo.jpg);
+    background-size: cover;
+}
+.section1 .live h3{
+    color: white;
+    background-color: red;
+    display: inline;
+    border-right: 4px solid rgb(255, 255, 255);
+    padding: 2px;
+}
+.section1 .live p{
+    background-color: white;
+    border-right: 4px solid rgb(0, 0, 0);
+    display: inline;
+    padding: 1px;
+}
+.section2{
+    width: 80%;        height: 50vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: auto;
+    margin-top: 40px;
+    gap: 10px;
+}
+.section2 .div1,.div2,.div3{
+    background-color: rgb(153, 0, 0);
+    color: white;
+    padding: 11px;
+    border-radius: 8px;
+    line-height: 30px;
+    transition: 0.5s;
+}
+.section2 .div2{
+    background-image: url(../img2/رفح.jpg);
+    background-size: cover;
+}
+.section2 .div3{
+    background-image: url(../img2/egyptian\ army.jpg);
+    background-size: cover;
+}
+.section2 .div2:hover,.div3:hover{
+    transform: scale(1.05);
+}
+.section2 .div1 span{
+    font-size: 80px;
+}
+.how-to-container{
+    width: 80%;            height: 100px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.how-to{
+   border-right: 2px solid green;
+}
+.how-to:last-child{
+    border: none;
+}
+.how-to p{
+    color: rgb(114, 114, 114);
+}
+.how-to i{
+    font-size: 30px;
+    color: rgb(206, 0, 0);
+}
+.how-to:hover i{
+    color: black;
+}
+.how-to-img{
+    width: 70px;  height: 70px;
+    margin: auto;
+    background-image: url(../img2/voice.jpg);
+    background-size: cover;
+    transition: .5s;
+}
+.how-to:hover .how-to-img{
+    background-position-y: 70px;
+}
+.img2{
+    background-image: url(../img2/first\ aid.jpg);
+}
+.city-container{
+    width: 80%;                   height: 70vh;
+    margin: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px ;
+    margin-top:40px ;
+    margin-bottom: 80px;
+}
+.city-parent{
+position: relative;
+transform-style:preserve-3d ;
+transition: 1s;
+}
+.city{
+    width: 100%;       height: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 5;
+    backface-visibility: hidden;
+}
+.city img{
+    width: 100%;  height: 90%;
+    
+}
+.back{
+    width: 100%  ;             height: 100%;
+    position: absolute;
+    transform: rotateY(180deg);
+    background-color: rgb(226, 226, 226);
+    font-size: 19px;
+    padding: 10px;
+    z-index: 3;
+}
+.city-parent:hover{
+transform: rotateY(180deg);
+}
